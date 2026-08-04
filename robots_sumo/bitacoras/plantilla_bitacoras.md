@@ -2,21 +2,23 @@ NOTA: A medida que se realizan las bitácoras deberán ser subidas al repo corre
 
 # BITÁCORA DE PROYECTO – ROBOT SUMO
 
-## Equipo: _______________________________
-## Nombre del Robot: ______________________
-## Capitán: _______________________________
-## Subcapitán: ____________________________
+## Equipo: Centaurus
+## Nombre del Robot: Alfa Centauri
+## Capitán: Dante Greblo
+## Subcapitán: Renzo Palas
 ## Integrantes:
--
--
--
+-Santiago Guatto
+-Ignacio Marini
+-Facundo Matias Lescano
 
 ## REGISTRO DE ACTIVIDADES
 ### Fecha: 
 ### Integrantes presentes:
--
--
--
+-Dante Greblo
+-Renzo Palas
+-Santiago Guatto
+-Ignacio Marini
+-Facundo Matias Lescano
 
 ### Objetivos de la jornada:
 -
