@@ -58,22 +58,22 @@ NOTA: A medida que se realizan las bitácoras deberán ser subidas al repo corre
 -
 
 ### APORTES INDIVIDUALES
-Integrante: ____________________________
+Integrante: Dante Greblo
 
 Tarea realizada:
 
-Integrante: ____________________________
+Integrante: Renzo Palas
 
 Tarea realizada:
 
-Integrante: ____________________________
+Integrante: Santiago Guatto
 
 Tarea realizada:
 
-Integrante: ____________________________
+Integrante: Ignacio Marini
 
 Tarea realizada:
 
-Integrante: ____________________________
+Integrante: Facundo Matias Lescano
 
 Tarea realizada:
