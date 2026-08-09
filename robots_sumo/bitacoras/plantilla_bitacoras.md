@@ -72,7 +72,7 @@ Tarea realizada:
 
 Integrante: Ignacio Marini
 
-Tarea realizada:
+Tarea realizada: Armado y desarmado del robot
 
 Integrante: Facundo Matias Lescano
 
