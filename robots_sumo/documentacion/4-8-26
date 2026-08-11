@@ -1,0 +1,140 @@
+SERVOMOTOR
+Un servomotor es un tipo de motor eléctrico de precisión que permite un control preciso de la posición, 
+velocidad y aceleración de un eje. A diferencia de un motor convencional, un servomotor incorpora un 
+sistema de retroalimentación que le permite conocer su posición en cada momento y ajustar su movimiento 
+en consecuencia
+
+servomotor que utilizamos: micro serve 9g (180 grados)
+
+¿Cómo funciona un servomotor?
+Un servomotor trata sobre un motor eléctrico, un reductor, un sensor de posición (generalmente un potenciómetro
+o un encoder) y un circuito de control. El circuito de control compara la posición buscada con la posición real 
+del motor y envía una señal de error al motor para corregir cualquier desviación.
+
+conexion
+este utiliza tres cables básicos alimentación de 5V, tierra y señal PWM
+
+glosario
+encoder:dispositivo que convierte el movimiento físico en señales eléctricas para medir posición, velocidad y 
+dirección
+
+fuente: novotec argentina SRL
+
+
+Puente H
+Circuito electrónico que sirve para controlar la dirección y velocidad de motores de corriente continua,
+Se llama H porque tiene 4 transistores colocados en forma de H con el motor en el centro.
+
+¿Cómo funciona?
+Al activar en diagonal un par de transistores u otro, la corriente cambia de sentido y el motor gira hacia un lado
+o hacia el otro:
+Sentido 1: Se cierran transistores superior-izquierdo e inferior-derecho.
+ Sentido 2: Se cierran transistores superior-derecho e inferior-izquierdo.
+ Freno: Se conectan ambos terminales del motor a la misma polaridad.
+Cortocircuito:Nunca deben activarse dos transistores del mismo lado a la vez, o conectarás directamente el positivo
+con el negativo.
+
+Conexiones clave (Ejemplo: Módulo L298N)
+
+Alimentación:
+VCC: Voltaje para mover los motores.
+GND: Tierra común (debe unirse con el GND del microcontrolador/Arduino).
+
+Salidas al Motor:
+OUT1 / OUT2: Van a los cables del motor.
+
+Pines de Control (al Microcontrolador):
+ IN1 e IN2: Controlan el sentido de giro.
+ ⁠IN1=1, IN2=0⁠ Giro A
+ ⁠IN1=0, IN2=1⁠ Giro B
+ ⁠IN1=0, IN2=0⁠ Apagado
+ ENA (Enable): Se conecta a un pin PWM para controlar la velocidad (0% a 100%).
+
+￼
+
+Fuentes: STMicroelectronics - L298N Datasheet, Arduino Documentation & Hardware Guides y MIT OpenCourseWare.
+
+Para conectar un Puente H (como el módulo L298N) a una Raspberry Pi, la clave está en alimentar los motores
+de forma externa y unir correctamente la masa o tierra.
+
+Alimentación y Masa: Fuente Externa (Fuente de 6V a 12V):
+
+Positivo (+): Al terminal 12VVCC del L298N.
+
+Negativo (-): Al terminal GND del L298N.
+
+Conexión de Tierra Común (Masa): Conecta un cable desde el GND del L298N hasta cualquier pin GND de la Raspberry Pi,
+Si no unes las masas (GND), las señales lógicas enviadas por la Raspberry Pi no tendrán referencia y los motores no 
+responderán.
+
+Pin de 5V: Dejarlo desconectado. No alimentar la Raspberry Pi con el puerto de 5V del módulo, ni le meter 5V de la Pi
+al módulo si este ya tiene su propio regulador.
+
+Pines de Control Lógico (GPIO)
+Conecta los pines de entrada del puente H a los pines GPIO de la Raspberry Pi (usando numeración BCM):
+
+ 
+L298N (Puente H)	Raspberry Pi (Pin GPIO)	Función
+IN1	GPIO 17 (Pin físico 11)	Sentido de giro Motor A
+IN2	GPIO 27 (Pin físicPuente H:Circuito electrónico que sirve para controlar la dirección y velocidad de motores de corriente continua, Se llama H porque tiene 4 transistores colocados en forma de H con el motor en el centro.
+
+¿Cómo funciona?
+Al activar en diagonal un par de transistores u otro, la corriente cambia de sentido y el motor gira hacia un lado o hacia el otro:
+Sentido 1: Se cierran transistores superior-izquierdo e inferior-derecho.
+ Sentido 2: Se cierran transistores superior-derecho e inferior-izquierdo.
+ Freno: Se conectan ambos terminales del motor a la misma polaridad.
+Cortocircuito:Nunca deben activarse dos transistores del mismo lado a la vez, o conectarás directamente el positivo con el negativo.
+
+Conexiones clave (Ejemplo: Módulo L298N)
+
+Alimentación:
+VCC: Voltaje para mover los motores.
+GND: Tierra común (debe unirse con el GND del microcontrolador/Arduino).
+
+Salidas al Motor:
+OUT1 / OUT2: Van a los cables del motor.
+
+Pines de Control (al Microcontrolador):
+ IN1 e IN2: Controlan el sentido de giro.
+ ⁠IN1=1, IN2=0⁠ Giro A
+ ⁠IN1=0, IN2=1⁠ Giro B
+ ⁠IN1=0, IN2=0⁠ Apagado
+ ENA (Enable): Se conecta a un pin PWM para controlar la velocidad (0% a 100%).
+
+￼
+
+Fuentes: STMicroelectronics - L298N Datasheet, Arduino Documentation & Hardware Guides y MIT OpenCourseWare.
+
+Para conectar un Puente H (como el módulo L298N) a una Raspberry Pi, la clave está en alimentar los motores de forma externa y unir correctamente la masa o tierra.
+
+Alimentación y Masa: Fuente Externa (Fuente de 6V a 12V):
+
+Positivo (+): Al terminal 12VVCC del L298N.
+
+Negativo (-): Al terminal GND del L298N.
+
+Conexión de Tierra Común (Masa): Conecta un cable desde el GND del L298N hasta cualquier pin GND de la Raspberry Pi, Si no unes las masas (GND), las señales lógicas enviadas por la Raspberry Pi no tendrán referencia y los motores no responderán.
+
+Pin de 5V: Dejarlo desconectado. No alimentar la Raspberry Pi con el puerto de 5V del módulo, ni le meter 5V de la Pi al módulo si este ya tiene su propio regulador.
+
+Pines de Control Lógico (GPIO)
+Conecta los pines de entrada del puente H a los pines GPIO de la Raspberry Pi (usando numeración BCM):
+
+ 
+L298N (Puente H)	Raspberry Pi (Pin GPIO)	Función
+IN1	GPIO 17 (Pin físico 11)	Sentido de giro Motor A
+IN2	GPIO 27 (Pin físico 13)	Sentido de giro Motor A
+ENA	GPIO 22 (Pin físico 15)	Velocidad (PWM) Motor A (Quitar el jumper de ENA)
+
+
+(Para un segundo motor se usan IN3, IN4 y ENB).
+
+Salida al Motor:
+Conecta los dos cables del motor DC a los terminales OUT1 y OUT2 del L298No 13)	Sentido de giro Motor A
+ENA	GPIO 22 (Pin físico 15)	Velocidad (PWM) Motor A (Quitar el jumper de ENA)
+
+
+(Para un segundo motor se usan IN3, IN4 y ENB).
+
+Salida al Motor:
+Conecta los dos cables del motor DC a los terminales OUT1 y OUT2 del L298N
