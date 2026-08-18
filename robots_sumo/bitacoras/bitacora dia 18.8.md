@@ -31,7 +31,7 @@ NOTA: A medida que se realizan las bitácoras deberán ser subidas al repo corre
 -encontramos una solucion al problema de visual studio code gracias a la ayuda de la profesora
 
 ### Problemas encontrados:
--falta de tiempo por acto escolar
+-falta de tiempo por acto escolar (horas efectivas: 10:30-12:00)
 -falla al guardar la bitacora del dia 11/8
 
 ### Soluciones implementadas o propuestas:
