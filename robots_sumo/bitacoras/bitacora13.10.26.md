@@ -22,7 +22,7 @@ diseño 3d terminado
 
 Problemas encontrados: un motor no prendia
 no tenemos mini protoboard
-servo no anda.
+servo no anda sin PWM
 
 Soluciones implementadas o propuestas: comprar una mini protoboard
 chequear si estaba conectado el puente H al pin correcto
@@ -36,7 +36,7 @@ motor prende
 codigo funciona
 
 Tareas pendientes: terminar el informe 
-hacer que el servo funcione
+agregar PWM al servo
 
 
 APORTES INDIVIDUALES
